@@ -7,11 +7,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.net.URL;
+
+import static com.example.aaa.epamTraining.Utils.NetworkUtils.generateURL;
+
 public class MainActivity extends AppCompatActivity {
+
     private EditText searchField;
     private Button button;
     private TextView result;
-    //kgkgkjgkjgkjgj
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                result.setText("кнопка была нажата");
+                URL generatedURL = generateURL(searchField.getText().toString());
+                result.setText(generatedURL.toString());
             }
         };
 
