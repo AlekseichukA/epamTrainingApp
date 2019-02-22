@@ -14,6 +14,9 @@ public class NetworkUtils {
 
 
 
+
+
+
     public static URL generateURL(String userId) {
         Uri builtUri = Uri.parse(VK_API_BASIC_USER_URL + VK_USER_GET)
                 .buildUpon()
